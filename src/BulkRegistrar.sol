@@ -23,8 +23,7 @@ contract BulkRegistrar {
         return availability;
     }
 
-    /// @notice Helper to check if a batch of names are the same price, and therefore safe to use with
-    /// `multiRegister()`.
+    /// @notice Check if a batch of names are the same price, and therefore safe to use with `multiRegister()`.
     function canBatch(string[] memory names) external view returns (bool) {
         uint256 length = names.length;
         uint256 duration = 31536000;
